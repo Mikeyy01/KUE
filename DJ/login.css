@@ -1,0 +1,64 @@
+
+
+/* BODY STYLE */
+body {
+    background:linear-gradient(90deg, #551448 0%, #000000 50%, #551448 100%);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+ 
+}
+
+/* DJ LOGIN LAYOUT */
+
+.containerLogin {
+    background-color: rgb(132, 133, 133);
+    width: 800px;
+    height: 500px;
+    margin-top: 300px;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-bottom: 300px;
+    border-radius: 20px;
+    
+}
+
+.containerLogin h1 {
+    color: aliceblue;
+    padding: 10px 0 50px 0;
+    border-bottom: 1px solid silver ;
+    text-align: center;
+}
+.inputBox{
+    display: flex;
+    justify-content: center;
+
+}
+.inputBox input {
+    width: 200px;
+    padding: 10px;
+    border: 1px solid rgb(173, 116, 45);
+    background: rgb(129, 87, 37);
+    border-radius: 5px;
+    outline: none;
+    color: white;
+    font-size: 1em;
+
+}
+
+.inputBox span {
+    position: absolute;
+    left: 0;
+    padding: 10px;
+    pointer-events: none;
+    font-size: 1em;
+    color:rgb(132, 133, 133);
+    text-transform: uppercase;
+}
+.containerLogin loginButton {
+    display: flex;
+    justify-content: center;
+}
