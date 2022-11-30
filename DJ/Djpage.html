@@ -5,12 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dj main page</title>
+    <link rel="stylesheet" href="Djpage.css" />
   </head>
 
   <body>
+    <div class="container-DJ">
+      <div class="el el--1">
+        <h2>Welcome DJ!</h2>
+        <h2 id="djcode"></h2>
+        <img class="DjPic" src="Dj-test.png" alt="djpic" />
+      </div>
+      <div class="el el--2">
+        <h2>TIPS:</h2>
+        <h2>€40,00</h2>
+      </div>
+      <div class="el el--3">3 requested</div>
+      <div class="el el--4">4 accepted</div>
+      <div class="el el--5">5 rejected</div>
+    </div>
+
     <!-- text input -->
-    <h2>Song Selected:</h2>
-    <h3 id="djcode"></h3>
+
+    <!-- script -->
     <script type="text/javascript">
       document.getElementById("djcode").innerHTML =
         localStorage.getItem("textvalue");

@@ -1,0 +1,71 @@
+@font-face {
+    font-family: Proxima;
+    src: url(ProximaNova-Light.otf) format(opentype);
+    font-weight: lighter;
+    text-decoration: none!important;
+}
+@font-face {
+    font-family: Proxima;
+    src: url(ProximaNova-Bold.otf) format(opentype);
+    font-weight: bold;
+    text-decoration: none!important;
+
+}
+/* body {
+    background:linear-gradient(56deg, #551448 0%, #000000 50%, #551448 100%);
+     width: 700px;
+    height: 700px;
+    width: 100vw; 
+    height: 100vh;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    
+} 
+*/
+
+.el--1 {
+    display: flex;
+    justify-items: left;
+    background-color: rgb(14, 5, 170);
+    align-self: start;
+}
+.DjPic {
+    display: flex;
+    justify-items:right;
+}
+
+.el--2 {
+    /* width: 100px;
+    height: 150px; */
+    display: flex;
+    justify-content: center;
+    background-color: rgb(18, 102, 102);
+}
+.el--3 {
+    /* height: 150px; */
+    background-color: rgb(255, 0, 0);
+}
+.el--4 {
+    /* height: 150px; */
+    background-color: rgb(255, 0, 132);
+}
+.el--5 {
+    /* height: 150px; */
+    background-color: rgb(255, 230, 0);
+}
+
+.container-DJ{
+    display: grid;
+    background-color: rgb(137, 137, 137);
+    font-size: 20px;
+    margin: 0px;
+    gap: 30px;
+    grid-template-columns: 250px 250px 250px;
+    justify-content: center;
+    grid-template-columns: 1fr;
+    grid: 270px 270px/ repeat (4,1fr);
+    
+
+}

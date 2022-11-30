@@ -14,6 +14,8 @@
 /* BODY STYLE */
 body {
     background:linear-gradient(56deg, #551448 0%, #000000 50%, #551448 100%);
+    width: 1280px;
+    height: 720px;
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -25,13 +27,7 @@ body {
 
 /* DJ LOGIN LAYOUT */
 
-/* .sideBG {
-    position: absolute;
-    width: 1500px;
-    height: 1500px;
-    left: -250px;
-    
-} */
+
 .container-Login {
     /* background-color: rgba(156, 156, 156, 0.3);
     width: 800px;
@@ -83,7 +79,7 @@ main{
     width: 200px;
     margin-top: 20px;
     padding: 20px;
-    background-color: black;
+    background-color: rgba(197, 141, 207, 0.315);
     border: 1px solid rgb(0, 0, 0);
     border-radius: 50px;
     outline: none;
@@ -116,3 +112,23 @@ button {
 
     
 }
+/* 
+.bg1 {
+    position: absolute;
+    width: 800px;
+    height: 400px;
+    top: -100px;
+    left: 750px;
+    transform: rotate(180deg);
+
+    
+}
+.bg2 {
+    position: absolute;
+    width: 900px;
+    height: 400px;
+    right: 800px;
+    top: 410px;
+    transform: rotate(180deg);
+    
+} */
