@@ -1,8 +1,19 @@
 
-
+@font-face {
+    font-family: Proxima;
+    src: url(ProximaNova-Light.otf) format(opentype);
+    font-weight: lighter;
+    text-decoration: none!important;
+}
+@font-face {
+    font-family: Proxima;
+    src: url(ProximaNova-Bold.otf) format(opentype);
+    font-weight: bold;
+    text-decoration: none!important;
+}
 /* BODY STYLE */
 body {
-    background:linear-gradient(90deg, #551448 0%, #000000 50%, #551448 100%);
+    background:linear-gradient(56deg, #551448 0%, #000000 50%, #551448 100%);
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -14,51 +25,94 @@ body {
 
 /* DJ LOGIN LAYOUT */
 
-.containerLogin {
-    background-color: rgb(132, 133, 133);
+/* .sideBG {
+    position: absolute;
+    width: 1500px;
+    height: 1500px;
+    left: -250px;
+    
+} */
+.container-Login {
+    /* background-color: rgba(156, 156, 156, 0.3);
     width: 800px;
-    height: 500px;
+    height: 700px;
     margin-top: 300px;
     margin-left: 100px;
     margin-right: 100px;
     margin-bottom: 300px;
+    border: 3px solid white ;
+ 
     border-radius: 20px;
+    border: double 5px transparent;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.436),rgba(255, 255, 255, 0.484)),linear-gradient(to right, #ffffff78 0%, #DC147A 50%, #8E769D 100%);
+    background-origin: border-box;
+    background-clip: content-box, border-box; */
+    
+}
+.kueLogo{
+position: relative;
+text-align: center;
+margin-bottom: 4rem;
+margin: 0;
+}
+
+.kueLogo img {
+    width: 300px;
+
+}
+h1 {
+    font-family: Proxima;
+    font-weight: lighter;
+    color: aliceblue;
+    padding: 10px 0 50px 0;
+    text-align: center;
+    border-bottom: 2px solid transparent;
+    border-image: linear-gradient(to right, #ffffff78 0%, #DC147A 50%, #8E769D 100%);
+    border-image-slice: 1;
+    letter-spacing: 0.05em;
     
 }
 
-.containerLogin h1 {
-    color: aliceblue;
-    padding: 10px 0 50px 0;
-    border-bottom: 1px solid silver ;
+main{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+
+}
+#djcode {
+    width: 200px;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: black;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 50px;
+    outline: none;
+    color: rgb(255, 255, 255);
+    font-size: 1em;
+}
+::placeholder {
     text-align: center;
 }
-.inputBox{
-    display: flex;
-    justify-content: center;
 
-}
-.inputBox input {
-    width: 200px;
-    padding: 10px;
-    border: 1px solid rgb(173, 116, 45);
-    background: rgb(129, 87, 37);
-    border-radius: 5px;
-    outline: none;
-    color: white;
-    font-size: 1em;
 
-}
-
-.inputBox span {
-    position: absolute;
-    left: 0;
-    padding: 10px;
-    pointer-events: none;
-    font-size: 1em;
-    color:rgb(132, 133, 133);
+button {
+    font-family: Proxima;
+    font-weight: lighter;
+    display: inline-block;
+    margin-bottom: 100px;
+    margin-left: 100px;
+    background: linear-gradient(135deg, #E084A6 0%, #634DA0 42%, #551448 100%);
+    text-align:center;
     text-transform: uppercase;
-}
-.containerLogin loginButton {
-    display: flex;
-    justify-content: center;
+    border-radius: 15px;
+    border:none;
+    width:100px;
+    height:40px;
+    font-size: 20px;
+    line-height: 1.8;
+    color: white;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+
+    
 }

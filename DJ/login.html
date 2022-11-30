@@ -9,15 +9,41 @@
   </head>
 
   <body>
-    <div class="containerLogin">
-      <div class="kueLogo"></div>
-      <h1>Login</h1>
-      <div class="inputBox">
-        <input type="text" placeholder=" Enter DJ code" />
+    <!-- <div class="sideBG">
+      <img src="shape.png" alt="sideBG" />
+    </div> -->
+
+    <div class="container-Login">
+      <div class="kueLogo">
+        <img src="KueLogo.png" alt="logo" />
       </div>
-      <div class="loginButton">
-        <button>Log in</button>
+      <h1>DJ Login</h1>
+
+      <main>
+        <form action="Djpage.html">
+          <input
+            type="text"
+            id="djcode"
+            required
+            placeholder=" Enter DJ code"
+          />
+        </form>
+      </main>
+      <div class="login-button">
+        <button
+          type="submit"
+          onclick="location.href='Djpage.html' ; passvalues();"
+        >
+          Log in
+        </button>
       </div>
+      <script type="text/javascript">
+        function passvalues() {
+          var song = document.getElementById("djcode").value;
+          localStorage.setItem("textvalue", song);
+          return false;
+        }
+      </script>
     </div>
   </body>
 </html>

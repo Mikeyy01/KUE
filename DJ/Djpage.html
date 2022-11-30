@@ -7,5 +7,13 @@
     <title>Dj main page</title>
   </head>
 
-  <body></body>
+  <body>
+    <!-- text input -->
+    <h2>Song Selected:</h2>
+    <h3 id="djcode"></h3>
+    <script type="text/javascript">
+      document.getElementById("djcode").innerHTML =
+        localStorage.getItem("textvalue");
+    </script>
+  </body>
 </html>
