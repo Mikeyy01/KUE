@@ -31,9 +31,9 @@
     background-color: rgb(14, 5, 170);
     align-self: start;
 }
-.DjPic {
-    display: flex;
-    justify-items:right;
+
+.kue {
+    width: 300px;
 }
 
 .el--2 {
@@ -55,6 +55,11 @@
     /* height: 150px; */
     background-color: rgb(255, 230, 0);
 }
+.el--6 {
+    /* height: 150px; */
+    background-color: rgb(113, 20, 62);
+}
+
 
 .container-DJ{
     display: grid;
