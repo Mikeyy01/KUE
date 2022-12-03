@@ -28,18 +28,15 @@
       <div class="login-button">
         <button
           type="submit"
-          onclick="location.href='Djpage.html' ; passvalues();"
+          onclick="location.href='Djpage.html' ; inputVal();"
         >
           Log in
         </button>
-
-        <!-- <div class="sideBG">
-          <img class="bg1" src="shape-01.png" alt="sideBG" />
-          <img class="bg2" src="shape-02.png" alt="sideBG" />
-        </div> -->
       </div>
+
+      <!-- script -->
       <script type="text/javascript">
-        function passvalues() {
+        function inputVal() {
           var song = document.getElementById("djcode").value;
           localStorage.setItem("textvalue", song);
           return false;
