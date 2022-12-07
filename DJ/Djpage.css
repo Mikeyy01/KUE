@@ -25,28 +25,24 @@ body {
     flex-wrap: wrap;
 
 } 
-
-
-.el--1 {
+#header {
     display: flex;
     background-color: rgb(14, 5, 170);
     font-size: 15px;
     
 }
-
 .kue {
     width: 170px;
     height: 120px;
 }
-.logOut{
+/* .logOut{
     width: 30px;
     height: 30px;
     position: relative;
     left: 420px;
     top: 35px;
     
-}
-
+} */
 h2 {
     position: relative;
     top: 10px;
@@ -59,119 +55,40 @@ h2 {
     color: white;
 }
 
-.el--2 {
+#dropdown {
     /* width: 800px; */
     display: flex;
     justify-content: center;
     background-color: rgb(18, 102, 102);
 }
-/* filter dropdown */
-.dropdown{
-    min-width: 15em;
-    position: relative;
-    margin: 2em;
+#showReq{
+  
+    background-color: red;
 }
-.dropdown * {
-    box-sizing: border-box;
-
-}
-.select{
-    background-color: #db5ec2;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border: 2px grey solid;
-    border-radius: 1em;
-    padding: 1em;
-    cursor: pointer;
-    /* transition: background 0.3s; */
-}
-.select-clicked {
-    border: 2px white solid;
-    box-shadow: 0 0 0.8em whitesmoke;
-}
-.select:hover {
-    background: rgb(156, 121, 156);
-}
-.caret{
-    width: 0;
-    height: 0;
-    border-left: 5px solid transparent;
-    border-right: 5px solid transparent;
-    border-top: 6px solid white;
-    transition: 0,03s;
-
-}
-.caret-rotate{
-    transform: rotate(180deg);
-}
-.menu{
-    list-style: none;
-    padding: 0.2em 0.5em;
-    background: rgb(68, 47, 68);
-    border: 1px white solid;
-    box-shadow: 0 0.5em 1em rgba(0,0,0,0.2);
-    border-radius: 0.5em;
-    color: white;
-    position: absolute;
-    top: 3em;
-    left: 50%;
-    width: 100%;
-    transform: translateX(-50%);
-    opacity: 0;
-    display: none;
-    transition: 0.2s;
-    z-index: 1;
-}
-.menu li{
-    padding: 0.7em 0.5em;
-    margin: 0.3em 0;
-    border-radius: 0.5em;
-    cursor: pointer;
-}
-.menu li:hover {
-    background: rgb(82, 47, 82);
-}
-.active {
-    background: rgb(230, 129, 230);
-
-}
-.menu-open {
-    display: block;
-    opacity: 1;
-}
-.show{
-    display: grid;
-}
-
-.el--3 {
-    /* width: 800px; */
-    background-color: rgb(255, 0, 0);
-}
-.el--4 {
-    /* width: 800px; */
-    background-color: rgb(255, 0, 132);
-}
-.el--5 {
-    /* width: 800px; */
-    background-color: rgb(255, 230, 0);
-}
-.el--6 {
-    /* width: 800px; */
-    background-color: rgb(113, 20, 62);
-}
-
-
-.container-DJ{
-    display: grid;
-    background-color: hidden;
-    width: auto;
-    font-size: 20px;
-    margin: 150px;
-    gap: 30px;
-    grid-template-rows: repeat(6,1fr);
-    align-content: center;
+#showAcc{
+    background-color: purple;
     
-
 }
+#showRej{
+    background-color: green;
+}
+#showPlayed{
+    background-color: maroon;
+}
+#showAll{  /*   #3 ALL  */
+    background-color: yellow;
+}
+
+/*   target page */
+.pageOption{
+    display: grid;
+    font-size: 20px;
+} 
+.containerDJ{
+    display: grid;
+    /* background-color: rgb(137, 137, 137); */
+    font-size: 20px;
+    margin: 0px;
+}
+  
+  

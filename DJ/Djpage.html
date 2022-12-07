@@ -6,79 +6,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dj main page</title>
     <link rel="stylesheet" href="Djpage.css" />
+    <script type = "text/javascript" src="Djpage.js" defer ></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"  ></script>
+    
   </head>
 
   <body>
     <div class="container-DJ">
       <!-- text input -->
-      <div id="el-1" class="el el--1">
+      <div id="header" class="el--1">
         <img class="kue" src="KueLogo.png" alt="Kue logo" />
         <h2>Welcome DJ&nbsp;</h2>
         <h2 id="djcode"></h2>
         <!-- <img class="logOut" src="logout.png" alt="logout" /> -->
-        <h2 class="djTips">TIPS:</h2>
-        <h2 class="djTips">€40,00</h2>
+        <!-- <h2 class="djTips">TIPS:</h2>
+        <h2 class="djTips">€40,00</h2> -->
       </div>
-      <div id="el-2" class="el el--2">
-        <!-- dropdown -->
-        <div class="dropdown">
-          <div class="select">
-            <span class="selected">Filter</span>
-            <div class="caret"></div>
-          </div>
-          <ul class="menu">
-            <li>Requested</li>
-            <li>Accepted</li>
-            <li>Rejected</li>
-            <li>Played</li>
-            <li>All</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="objects">
-        <div id="el-3" class="el el--3">3 requested</div>
-        <div id="el-4" class="el el--4">4 accepted</div>
-        <div id="el-5" class="el el--5">5 rejected</div>
-        <div id="el-6" class="el el--6">6 played</div>
+      <!-- dropdown -->
+      <div id="dropdown" class="el--2">
+        <select id="dropDown">
+          <option value="0" selected>All</option>
+          <option value="1">Requested</option>
+          <option value="2">Accepted</option>
+          <option value="3">Rejected</option>
+          <option value="4">Played</option>
+        </select>
       </div>
     </div>
+    <div class="pageOption">
+      <div style="display: grid" id="showAll" class="element"> <img class="logOut" src="logout.png" alt="logout" /></div>
+      <div style="display: grid" id="showReq" class="element">
+        4 requested
+      </div>
+      <div style="display: grid" id="showAcc" class="element">5 accepted</div>
+      <div style="display: grid" id="showRej" class="element">6 rejected</div>
+      <div style="display: grid" id="showPlayed" class="element">
+        7 played
+      </div>
 
-    <!-- script -->
-    <script type="text/javascript">
-      // input text value
-      document.getElementById("djcode").innerHTML =
+      <!-- <script type = "text/javascript" >
+        document.getElementById("djcode").innerHTML =
         localStorage.getItem("textvalue");
+      </script> -->
 
-      // getting dropdown from the doc
-      const dropdown = document.querySelectorAll(".dropdown");
-
-      dropdown.forEach((dropdown) => {
-        const select = dropdown.querySelector(".select");
-        const caret = dropdown.querySelector(".caret");
-        const menu = dropdown.querySelector(".menu");
-        const option = dropdown.querySelectorAll(".menu li");
-        const selected = dropdown.querySelector(".selected");
-
-        select.addEventListener("click", () => {
-          select.classList.toggle("select-clicked");
-          caret.classList.toggle("caret-rotate");
-          menu.classList.toggle("menu-open");
-        });
-
-        option.forEach((option) => {
-          option.addEventListener("click", () => {
-            selected.innerText = option.innerText;
-            select.classList.remove("select-clicked");
-            caret.classList.remove("caret-rotate");
-            menu.classList.remove("menu-open");
-            option.forEach((option) => {
-              option.classList.remove("active");
-            });
-            option.classList.add("active");
-          });
-        });
-      });
-    </script>
   </body>
 </html>
