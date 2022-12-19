@@ -34,6 +34,7 @@ body {
 .kue {
     width: 170px;
     height: 120px;
+    margin-left: 10px;
 }
 /* .logOut{
     width: 30px;
@@ -58,25 +59,45 @@ h2 {
 #dropdown {
     /* width: 800px; */
     display: flex;
-    justify-content: center;
-    background-color: rgb(18, 102, 102);
+    justify-content: right;
+    background-color: none;
 }
 #showReq{
+    display: flex;
+    justify-content: center;
+    width: 600px;
+    height: 500px;
   
     background-color: red;
 }
 #showAcc{
     background-color: purple;
+    display: flex;
+    justify-content: center;
+    width: 600px;
+    height: 500px;
     
 }
 #showRej{
     background-color: green;
+    display: flex;
+    justify-content: center;
+    width: 600px;
+    height: 500px;
 }
 #showPlayed{
     background-color: maroon;
+    display: flex;
+    justify-content: center;
+    width: 600px;
+    height: 500px;
 }
 #showAll{  /*   #3 ALL  */
     background-color: yellow;
+    display: flex;
+    justify-content: center;
+    width: 600px;
+    height: 500px;
 }
 
 /*   target page */
