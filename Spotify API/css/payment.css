@@ -80,7 +80,7 @@
 /* song track and artist */
 .payment .track-info {
   flex: 0 0  auto;
-  width: 200px;
+  width: 55%;
   text-decoration: none;
   font-size: 20px;
   position: absolute;
@@ -103,7 +103,7 @@
   padding-left: 15px;
 }
 
-.payment .track-info .title {
+.payment .track-info #searchedTrackArtist {
   color: grey;
 }
 
@@ -231,6 +231,7 @@
   }
   .payment .track-info li {
     padding-left: 5px;
+    font-size: 18px;
   }
   .payment .confirmation h2 {
     font-size: 28px;

@@ -21,9 +21,25 @@ const spotifyAccess = (function() {
         return data.access_token;
     }
 
+    const getTrack = async (token, trackId) => {
+        const result = await fetch('https://api.spotify.com/v1/tracks/' + trackId, {
+            method: 'GET',
+            headers: {
+                'Content-Type' : 'application/json', 
+                'Authorization' : 'Bearer ' + token
+            }
+        });
+
+        const data = await result.json();
+        return data;
+    }
+
     return {
         getAccessToken() {
             return getToken();
+        },
+        getTrackDetails(token, trackId) {
+            return getTrack(token, trackId);
         }
     }
 })();
@@ -54,10 +70,11 @@ async function search(API) {
 const getTracks = (tracks) => {
     const results = tracks
     .map((track) => 
+
         `
         <div class="tracks">
 
-            <a href="payment.html" id="${track.id})">
+            <div id="${track.id}" onclick="saveData(this.id)">
 
                 <div class="track-row">
                     <img src="${track.album.images[2].url}">
@@ -73,13 +90,32 @@ const getTracks = (tracks) => {
                         <p class="time">${msToMinutesAndSeconds(track.duration_ms)}</p>
                     </div>
                 </div>
-            </a>
+            </div>
         </div>
         `
 
     ).join("\n");
 
     return results; 
+}
+
+// get clicked track's data
+async function saveData(savedId) {
+    const savedID = savedId;
+
+    const token = await spotifyAccess.getAccessToken();
+
+    const track = await spotifyAccess.getTrackDetails(token, savedID);
+
+    // store data
+    localStorage.setItem("searchedTrackName", track.name);
+    localStorage.setItem("searchedTrackArtist", track.artists[0].name);
+    localStorage.setItem("searchedTrackImg", track.album.images[2].url);
+
+    console.log(localStorage.getItem("searchedTrackImg"))
+
+    // direct to payment page
+    window.location.href = "payment.html";
 }
 
 // converting track duration from ms to minutes and seconds 
@@ -138,8 +174,6 @@ form.addEventListener("submit", function (event) {
     // if valid, submit the form
     if (inputValid) {
         search(spotifyAccess);
-
-        localStorage.setItem("searchedTrack", input.value)
     }
 });
 
