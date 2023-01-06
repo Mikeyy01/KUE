@@ -1,14 +1,17 @@
+import Confirm from './Confirm';
+import '../assets/css/list.css';
 import {useState, useEffect} from "react";
 import axios from "axios";
 const { REACT_APP_BACKEND_URL } = process.env
 
+
+
 const TodoList = () => {
     const [todos, setTodos] = useState([]);
-    const [newTodo, setNewTodo] = useState('');
+    const [newTodo, setNewTodo] = useState({ artist: '', track: '', coverArtURL: '' });
     const [editableTodo, setEditableTodo] = useState(null);
 
 const getTodos = () =>
-
     axios(`${REACT_APP_BACKEND_URL}/todos`)
         .then((resp) => setTodos(resp.data));
 
@@ -20,15 +23,19 @@ const getTodos = () =>
     //     .then((data) => setTodos(data));
 
     useEffect(() => {
-         getTodos();
-       },[]);
+        const interval = setInterval(() => {
+            getTodos();
+        }, 1000); // 1000 milliseconds = 1 second
+
+        return () => clearInterval(interval);
+    }, []);
     //setting an empty bracket, so that code does not rerender infinitely.
 
     const handleNewTodo = (event) => {
         event.preventDefault();
         //if nothing is typed into text box
-        if (!newTodo){
-           return;
+        if (!newTodo.artist || !newTodo.track || !newTodo.coverArtURL) {
+            return;
         }
         const data = {
             id: todos.length > 0 ? todos[todos.length - 1].id + 1 : 1,
@@ -37,9 +44,9 @@ const getTodos = () =>
         };
         //POST new task
         axios
-            .post(`${REACT_APP_BACKEND_URL}/todos`,data)
+            .post(`${REACT_APP_BACKEND_URL}/todos`, data)
             .then((resp) => setTodos([...todos, resp.data]));
-        setNewTodo("");
+        setNewTodo({ artist: '', track: '', coverArtURL: '' });
     };
 
 const handleDelete = (todo)=>{
@@ -73,25 +80,31 @@ const toggleComplete = todo => {
 
 
 
-const handleEditTodo = (event) => {
-    event.preventDefault();
-    if (!editableTodo || !editableTodo.todo){
-        return;
-    }
-    axios.put(
-        `${REACT_APP_BACKEND_URL}/todos/${editableTodo.id}`,
-        editableTodo)
-        .then(resp => {
-            const newTodos = todos.map(el => {
-                if (el.id !== editableTodo.id){
-                    return el;
-                }
-                return  editableTodo;
+    const handleEditTodo = (event) => {
+        event.preventDefault();
+        if (!editableTodo.todo.track) {
+            return;
+        }
+        const data = {
+            id: editableTodo.id,
+            todo: {
+                artist: editableTodo.todo.artist,
+                track: editableTodo.todo.track,
+                coverArtURL: editableTodo.todo.coverArtURL,
+            },
+            completed: editableTodo.completed,
+        };
+        axios
+            .put(`${REACT_APP_BACKEND_URL}/todos/${editableTodo.id}`, data)
+            .then((resp) => {
+                const updatedTodos = todos.map((todo) =>
+                    todo.id === editableTodo.id ? resp.data : todo
+                );
+                setTodos(updatedTodos);
+                setEditableTodo(null);
             });
-            setTodos(newTodos);
-            setEditableTodo(null);
-        });
-}
+    };
+
 
 
     return <div>
@@ -118,13 +131,15 @@ const handleEditTodo = (event) => {
                 <button onClick={() => setEditableTodo(null)}>X</button>
                     </div>
                 ) : (
-            <div key={todo.id} style={{ display: "flex", margin: "8px" }}>
-            <p style={{ textDecoration: todo.completed ? "line-through" : "none"}}>{todo.todo}</p>
-                <button onClick={() => setEditableTodo(todo)}>Edit</button>
-                <button onClick={() => toggleComplete(todo)}>V</button>
-                <button onClick={() => handleDelete(todo)}>X</button>
-
-            </div>
+                <div key={todo.id} style={{ display: "flex", margin: "8px" }}>
+                    <h3>{todo.todo.artist}</h3>
+                    <p style={{ textDecoration: todo.completed ? "line-through" : "none" }}>
+                        {todo.todo.track}
+                    </p>
+                    <img src={todo.todo.coverArtURL} alt="cover art" />
+                    <button onClick={() => toggleComplete(todo)}>V</button>
+                    <button onClick={() => handleDelete(todo)}>X</button>
+                </div>
         ))}
     </div>
 };

@@ -1,4 +1,5 @@
-import React, { useState, useEffect   } from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from "axios";
 import '../assets/css/payment.css';
 import { useLocation } from 'react-router-dom';
 import abn from '../assets/images/abn_amro.png';
@@ -8,8 +9,12 @@ import revolut from '../assets/images/revolut.svg';
 import kuelogo from '../assets/images/logo.png';
 import arrow1 from '../assets/images/arrow.png';
 
+const { REACT_APP_BACKEND_URL } = process.env;
 
 function Confirm() {
+    const [todos, setTodos] = useState([]);
+    const [newTodo, setNewTodo] = useState({ artist: '', track: '', coverArtURL: '' });
+    const [editableTodo, setEditableTodo] = useState(null);
     const [selectedOption, setSelectedOption] = useState(null);
     const [selectListVisible, setSelectListVisible] = useState(false);
     const [submitVisible, setSubmitVisible] = useState(false);
@@ -17,11 +22,45 @@ function Confirm() {
     const artist = decodeURIComponent(location.search.split('artist=')[1].split('&')[0]);
     const track = decodeURIComponent(location.search.split('track=')[1].split('&')[0]);
     const coverArtURL = decodeURIComponent(location.search.split('coverArtURL=')[1].split('&')[0]);
+    const timestamp = new Date().toISOString();
+    const date = new Date(timestamp);
+    const formattedDate = date.toLocaleDateString() + ' ' + date.toLocaleTimeString();
+
+
 
     useEffect(() => {
         // code to update src attribute of searchedTrackImg element with coverArtURL value
         document.getElementById("searchedTrackImg").src = coverArtURL;
+        //set the artist, track, and coverArtURL values for newTodo
+        setNewTodo({ artist: artist, track: track, coverArtURL: coverArtURL });
     }, []);
+
+    const getTodos = () =>
+        axios(`${REACT_APP_BACKEND_URL}/todos`)
+            .then((resp) => setTodos(resp.data));
+
+    useEffect(() => {
+        getTodos();
+    }, []);
+
+    const handleNewTodo = (event) => {
+        event.preventDefault();
+        //if artist, track, or coverArtURL is not set
+        if (!newTodo.artist || !newTodo.track || !newTodo.coverArtURL) {
+            return;
+        }
+        const data = {
+            id: todos.length > 0 ? todos[todos.length - 1].id + 1 : 1,
+            todo: newTodo,
+            completed: false,
+            timestamp: formattedDate
+        };
+        //POST new task
+        axios
+            .post(`${REACT_APP_BACKEND_URL}/todos`, data)
+            .then((resp) => setTodos([...todos, resp.data]));
+        setNewTodo("");
+    };
 
 
     const options = [
@@ -77,7 +116,7 @@ function Confirm() {
                     </div>
                     <h2>€ 2,50</h2>
 
-                    <form action="pending.html">
+                    <form onSubmit={handleNewTodo}>
                         <div className="dropdown">
                             <div className="dropdownField" onClick={toggleSelectList}>
                                 {selectedOption && (
@@ -112,10 +151,10 @@ function Confirm() {
 
                         <input
                             type="submit"
+                            onSubmit={handleNewTodo}
                             value="Confirm and Pay"
                             id="submit"
                             style={{ display: submitVisible ? 'block' : 'none' }}
-                            href="pending.html"
                         />
                     </form>
                 </div>
