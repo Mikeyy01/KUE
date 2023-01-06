@@ -1,9 +1,34 @@
 {
   "todos": [
     {
-      "id": 1,
-      "todo": "I'm Good (Blue)",
-      "completed": false
+      "id": 8,
+      "todo": {
+        "artist": "Drake",
+        "track": "Right Hand",
+        "coverArtURL": "https://i.scdn.co/image/ab67616d00004851c1c3c30049659824bdac476b"
+      },
+      "completed": false,
+      "timestamp": "1/6/2023 10:06:26 AM"
+    },
+    {
+      "id": 9,
+      "todo": {
+        "artist": "Brenda Lee",
+        "track": "Rockin' Around The Christmas Tree",
+        "coverArtURL": "https://i.scdn.co/image/ab67616d000048517845f74d6db14b400fa61cd3"
+      },
+      "completed": false,
+      "timestamp": "1/6/2023 10:16:57 AM"
+    },
+    {
+      "id": 10,
+      "todo": {
+        "artist": "JACKBOYS",
+        "track": "GATTI",
+        "coverArtURL": "https://i.scdn.co/image/ab67616d00004851dfc2f59568272de50a257f2f"
+      },
+      "completed": false,
+      "timestamp": "1/6/2023 10:18:01 AM"
     }
   ]
 }
