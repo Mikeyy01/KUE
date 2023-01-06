@@ -2,6 +2,7 @@ import './App.css';
 import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import InputText from './components/InputText';
 import TodoList from "./components/TodoList";
+import Confirm from "./components/Confirm";
 import Home from "./components/Home";
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
                 <Routes>
                     <Route path="/" element={<Home/>} />
                     <Route path="/input-text" element={<InputText/>} />
+                    <Route path="/confirm" element={<Confirm/>} />
                     <Route path="/list" element={<TodoList/>} />
                 </Routes>
             </Router>

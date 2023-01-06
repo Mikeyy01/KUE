@@ -3,19 +3,19 @@
 
 @font-face {
     font-family: ProximaNova;
-    src: url(assets/fonts/ProximaNova.otf);
+    src: url(../fonts/ProximaNova.otf);
 }
 
 @font-face {
     font-family: Proxima;
-    src: url(assets/fonts/ProximaNova-Light.otf);
+    src: url(../fonts/ProximaNova-Light.otf);
     font-weight: lighter;
     text-decoration: none !important;
 }
 
 @font-face {
     font-family: Proxima Bold;
-    src: url(assets/fonts/ProximaNova-Bold.otf);
+    src: url(../fonts/ProximaNova-Bold.otf);
     font-weight: bold;
     text-decoration: none !important;
 }
@@ -40,25 +40,24 @@
     width: 100vw;
     overflow: hidden;
     margin: 0;
-
 }
 
 
-.logo {
+.blob .logo {
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 90%;
 }
 
-.logo img {
+.blob .logo img {
     width: 50%;
     margin-top: 15%;
     max-width: 250px;
     height: auto;
 }
 
-.X {
+.blob .X {
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -69,13 +68,13 @@
     height: auto;
 }
 
-.ClubLine {
+.blob .ClubLine {
     position: relative;
     top: 0;
     left: 0;
 }
 
-.Club {
+.blob .Club {
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -85,7 +84,7 @@
 
 
 
-.line2 {
+.blob .line2 {
     z-index: 1;
     position: relative;
     width: 100%;
@@ -100,7 +99,7 @@
     background: linear-gradient(90deg, rgba(103, 168, 175, 1) 0%, rgba(234, 2, 120, 1) 50%, rgba(97, 226, 186, 1) 80%);
 }
 
-.text1 {
+.blob .text1 {
     font-size: 4vw;
     position: relative;
     text-align: center;
@@ -120,7 +119,7 @@
     }
 }
 
-.text2 {
+.blob .text2 {
     margin-left: 5%;
     margin-right: 5%;
     text-align: center;
@@ -130,14 +129,14 @@
 }
 
 
-.search-button {
+.blob .search-button {
     display: flex;
     text-align: center;
     justify-content: center;
     align-content: space-around;
 }
 
-button {
+.blob button {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -162,17 +161,17 @@ button {
     line-height: 1;
 }
 
-button img {
+.blob button img {
     margin-top: 13%;
     vertical-align: top;
     margin-bottom: 10px;
 }
 
-.search-button:hover {}
+.blob .search-button:hover {}
 
 @media only screen and (min-width: 456px) {
     /* styles for screens with a maximum width of 600px go here */
-    .section1 {
+    .blob .section1 {
         width: 50%;
         margin: 0 auto;
     }
@@ -181,7 +180,7 @@ button img {
 
 @media only screen and (min-width: 990px) {
     /* styles for screens with a maximum width of 600px go here */
-    .section1 {
+    .blob .section1 {
         width: 40%;
         margin: 0 auto;
     }
@@ -190,7 +189,7 @@ button img {
 
 @media only screen and (min-width: 1200px) {
     /* styles for screens with a maximum width of 600px go here */
-    .section1 {
+    .blob .section1 {
         width: 30%;
         margin: 0 auto;
     }
@@ -198,7 +197,7 @@ button img {
 }
 @media only screen and (min-width: 1500px) {
     /* styles for screens with a maximum width of 600px go here */
-    .section1 {
+    .blob .section1 {
         width: 20%;
         margin: 0 auto;
     }

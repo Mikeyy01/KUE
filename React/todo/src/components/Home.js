@@ -1,5 +1,6 @@
 import React from 'react';
-import '../Home.css';
+import { useNavigate } from 'react-router-dom';
+import '../assets/css/Home.css';
 import searchIcon from '../assets/images/Search.svg';
 import queueIcon from '../assets/images/Queue.svg';
 import KueLogo from '../assets/images/logo.png'
@@ -17,7 +18,10 @@ const welcomeLines = [
 
 
 function Home(props) {
-
+    const navigate = useNavigate();
+    const handleSearchClick = () => {
+        navigate('/input-text');
+    }
     const randomText = welcomeLines[Math.floor(Math.random() * welcomeLines.length)];
 
 
@@ -53,7 +57,7 @@ function Home(props) {
                 </div>
                 <main>
                     <div className="search-button" style={{ width: '100%', margin: '0 auto', textAlign: 'center' }}>
-                        <button type="submit">
+                        <button type="submit" onClick={handleSearchClick}>
                             <img src={searchIcon} width="50%" height="50%" alt="Search icon" />
                             Search
                         </button>
