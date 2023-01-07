@@ -8,33 +8,42 @@ import rabo from '../assets/images/rabobank.png';
 import revolut from '../assets/images/revolut.svg';
 import kuelogo from '../assets/images/logo.png';
 import arrow1 from '../assets/images/arrow.png';
+import { useNavigate } from 'react-router-dom';
 
 const { REACT_APP_BACKEND_URL } = process.env;
 
+
+//confirmation page functions
 function Confirm() {
-    const [todos, setTodos] = useState([]);
-    const [newTodo, setNewTodo] = useState({ artist: '', track: '', coverArtURL: '' });
-    const [editableTodo, setEditableTodo] = useState(null);
+    const [todos, setTodos] = useState([]);  // state for the tod0 l1st
+    const [newTodo, setNewTodo] = useState({ artist: '', track: '', coverArtURL: '' }); // state for the new tod0 object
+    // state for the selected bank option
     const [selectedOption, setSelectedOption] = useState(null);
     const [selectListVisible, setSelectListVisible] = useState(false);
+    // state for whether the submit button is visible or not
     const [submitVisible, setSubmitVisible] = useState(false);
+    const navigate = useNavigate();
+
+    //URL query retrieving and decoding
     const location = useLocation();
     const artist = decodeURIComponent(location.search.split('artist=')[1].split('&')[0]);
     const track = decodeURIComponent(location.search.split('track=')[1].split('&')[0]);
     const coverArtURL = decodeURIComponent(location.search.split('coverArtURL=')[1].split('&')[0]);
+
+
+    //current timestamp and formatting of the date and time
     const timestamp = new Date().toISOString();
     const date = new Date(timestamp);
     const formattedDate = date.toLocaleDateString() + ' ' + date.toLocaleTimeString();
 
-
-
     useEffect(() => {
-        // code to update src attribute of searchedTrackImg element with coverArtURL value
+        // update image id with the coverartURL
         document.getElementById("searchedTrackImg").src = coverArtURL;
-        //set the artist, track, and coverArtURL values for newTodo
+        //set the track values for newTodo
         setNewTodo({ artist: artist, track: track, coverArtURL: coverArtURL });
     }, []);
 
+//retrieve song requests from json server backend
     const getTodos = () =>
         axios(`${REACT_APP_BACKEND_URL}/todos`)
             .then((resp) => setTodos(resp.data));
@@ -43,6 +52,7 @@ function Confirm() {
         getTodos();
     }, []);
 
+    //submitting and formatting the data of a new song request
     const handleNewTodo = (event) => {
         event.preventDefault();
         //if artist, track, or coverArtURL is not set
@@ -56,14 +66,17 @@ function Confirm() {
             status: 'requested',
             timestamp: formattedDate
         };
-        //POST new task
+        //POST new song request
         axios
             .post(`${REACT_APP_BACKEND_URL}/todos`, data)
-            .then((resp) => setTodos([...todos, resp.data]));
-        setNewTodo("");
+            .then((resp) => {
+                setTodos([...todos, resp.data]); // update the tod,o list with the new task
+                navigate('/pending');
+            });
+        setNewTodo(""); // reset the song request object
     };
 
-
+// bank drop down menu
     const options = [
         { value: 'bank', label: 'ABN Amro', img: abn },
         { value: 'bank', label: 'ING', img: ing },
@@ -71,6 +84,7 @@ function Confirm() {
         { value: 'bank', label: 'Revolut', img: revolut },
     ];
 
+    //
     const toggleSelectList = () => {
         setSelectListVisible(!selectListVisible);
     };
@@ -78,11 +92,11 @@ function Confirm() {
     const handleOptionClick = (option) => {
         setSelectedOption(option);
         setSelectListVisible(false);
+        // show the submit button
         setSubmitVisible(true);
     };
 
-
-
+    //display info from URL query
     const TrackConfirm = ({ artist, track }) => {
         return (
             <div className="info">
@@ -94,11 +108,15 @@ function Confirm() {
         );
     };
 
+    const returnHome = () => {
+        navigate("/");
+    }
+
     return (
         <section className="payment">
             <div className="container">
                 <header>
-                    <a href="index.html">
+                    <a onClick={returnHome} href="/">
                         <img src={kuelogo} alt="logo" />
                     </a>
                 </header>
@@ -115,7 +133,7 @@ function Confirm() {
                             </ul>
                         </div>
                     </div>
-                    <h2>€ 2,50</h2>
+                    <h2>€ 10</h2>
 
                     <form onSubmit={handleNewTodo}>
                         <div className="dropdown">

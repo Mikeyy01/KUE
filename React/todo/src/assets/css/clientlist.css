@@ -2,7 +2,6 @@
     background: linear-gradient(56deg, rgb(85, 20, 72) -20%, rgb(0, 0, 0) 50%, rgb(85, 20, 72) 120%) no-repeat fixed;
     width: 100vw;
     height: 100vh;
-
 }
 
 .headerLogo{
@@ -23,7 +22,7 @@ h2{
     display: grid;
     justify-content: center;
     align-items: center;
-    margin: 0;
+
 
 }
 .aBtn{
@@ -55,7 +54,7 @@ h2{
     margin-top: 50px;
 }
 .dropDown h3 {
-color: white;
+    color: white;
     font-weight: bold;
     padding-top: 5px;
     padding-right: 10px;
@@ -100,6 +99,7 @@ select {
     border-image: initial;
 }
 
+
 .albumCover {
     background: none;
     margin: 5px;
@@ -120,6 +120,16 @@ select {
     margin: 10px;
 }
 
+.songName,
+.artistName,
+.timeStamp {
+    margin: 0 auto;
+}
+
+.todoBody1{
+    margin: 0 auto;
+}
+
 .artistName {
     background: none;
     color: white;
@@ -128,89 +138,19 @@ select {
 }
 
 
+
 h1{
     color: white;
-    padding-top: 50px;
     text-align: center;
     font-weight: bold;
 }
-@media screen and (max-width: 845px) {
-
-    .todoBody .todo {
-        transform: scale(0.9);
-    }
-
-    .todoBody .dropDown {
-        transform: scale(0.9);
-    }
-}
-    @media screen and (max-width: 755px) {
-
-        .todoBody .todo {
-            transform: scale(0.8);
-        }
-
-        .todoBody .dropDown {
-            transform: scale(0.8);
-        }
-    }
-@media screen and (max-width: 670px) {
-
-    .todoBody .todo {
-        transform: scale(0.7);
-    }
-
-    .todoBody .dropDown {
-        transform: scale(0.7);
-    }
-}
-
-
-@media screen and (max-width: 590px) {
-
-    .todoBody .todo {
-        transform: scale(0.6);
-    }
-
-    .todoBody .dropDown {
-        transform: scale(0.6);
-    }
-}
-
 
 @media screen and (max-width: 500px) {
 
-    .todoBody .todo {
-        transform: scale(0.6);
+
+    .todoBody1 .todo {
+        transform: scale(0.5);
     }
-    .todoBody .dropDown {
-        transform: scale(0.55);
-    }
+
 
 }
-
-@media screen and (max-width: 480px) {
-
-    .todoBody .todo {
-        transform: scale(0.55);
-    }
-    .todoBody .dropDown {
-        transform: scale(0.55);
-    }
-
-}
-
-@media screen and (max-width: 440px) {
-
-    .todoBody .todo {
-        transform: scale(0.45);
-    }
-    .todoBody .dropDown {
-        transform: scale(0.45);
-    }
-
-}
-
-
-
-

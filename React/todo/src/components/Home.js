@@ -7,6 +7,7 @@ import KueLogo from '../assets/images/logo.png'
 import XLogo from '../assets/images/X.svg'
 import ClubLogo from '../assets/images/Club.svg'
 
+//welcome lines array
 const welcomeLines = [
     "Hello, good-looking!",
     "You look fire tonight!",
@@ -16,12 +17,20 @@ const welcomeLines = [
     "If you were a vegetable, you’d be a ‘cute-cumber."
 ];
 
-
+//home page functions
 function Home(props) {
     const navigate = useNavigate();
-    const handleSearchClick = () => {
+    //Search Page redirect
+    const directToSearch = () => {
         navigate('/input-text');
     }
+    //Queue page redirect
+    const directToQueue = () => {
+        navigate('/queue');
+    }
+
+
+// random line on refresh
     const randomText = welcomeLines[Math.floor(Math.random() * welcomeLines.length)];
 
 
@@ -57,11 +66,11 @@ function Home(props) {
                 </div>
                 <main>
                     <div className="search-button" style={{ width: '100%', margin: '0 auto', textAlign: 'center' }}>
-                        <button type="submit" onClick={handleSearchClick}>
+                        <button type="submit" onClick={directToSearch}>
                             <img src={searchIcon} width="50%" height="50%" alt="Search icon" />
                             Search
                         </button>
-                        <button className="list-btn" type="submit">
+                        <button className="list-btn" type="submit" onClick={directToQueue}>
                             <img src={queueIcon} width="50%" height="50%" alt="Queue icon" />
                             Queue
                         </button>

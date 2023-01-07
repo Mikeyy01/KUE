@@ -1,26 +1,15 @@
 {
   "todos": [
     {
-      "id": 11,
+      "id": 4,
       "todo": {
-        "artist": "Lil Uzi Vert",
-        "track": "20 Min",
-        "coverArtURL": "https://i.scdn.co/image/ab67616d000048510d5a84e4e47399d2726c330c"
+        "artist": "TALK",
+        "track": "Run Away to Mars",
+        "coverArtURL": "https://i.scdn.co/image/ab67616d00004851c83a09ef90c0c65e528cc651"
       },
-      "completed": false,
-      "status": "requested",
-      "timestamp": "1/7/2023 2:39:37 AM"
-    },
-    {
-      "id": 12,
-      "todo": {
-        "artist": "Kanye West",
-        "track": "Stronger",
-        "coverArtURL": "https://i.scdn.co/image/ab67616d0000485126f7f19c7f0381e56156c94a"
-      },
-      "completed": false,
-      "status": "requested",
-      "timestamp": "1/7/2023 3:01:42 AM"
+      "completed": true,
+      "status": "Approved",
+      "timestamp": "1/7/2023 12:51:40 PM"
     }
   ]
 }
