@@ -69,6 +69,10 @@
   color: rgb(253,253,253, 0.7);
 }
 
+.search input:not(:placeholder-shown) ~ #btnDelete {
+  display: block;
+}
+
 /* form button */
 .search form button {
   background-color: transparent;
@@ -102,6 +106,14 @@
   height: 1.2em
 }
 
+.search #topTitle {
+  font-size: 1.3rem;
+  color: rgb(253,253,253);
+  font-weight: bold;
+  padding-bottom: 25px;
+  display: none;
+}
+
 /* tracks section */
 .songDisplay {
   margin-bottom: 25px;
@@ -113,7 +125,7 @@
 .songDisplay .tracks {
   width: 100%;
   overflow: hidden;
-  padding: 10px 7px 0px 7px;
+  padding: 10px 7px 0px 40px;
   border-radius: 5px;
 }
 
@@ -129,7 +141,6 @@
   display: flex;
   flex-wrap: wrap;
   color: white;
-  padding: 2px 5px 6px 5px;
   border-radius: 8px;
   box-sizing: border-box;
   position: relative;
@@ -139,7 +150,7 @@
 /* song track and artist */
 .songDisplay .track-info {
   flex: 0 0  auto;
-  width: 220px;
+  width: 440px;
   text-decoration: none;
   float: left;
 }
@@ -187,7 +198,7 @@
 }
 
 .songDisplay .track-time {
-  width: calc(100% - 265px);
+  width: calc(100% - 505px);
   overflow: auto;
 }
 
@@ -199,7 +210,10 @@
 }
 
 /* Responsiveness*/
-@media (max-width: 768px) {
+@media (max-width: 625px) {
+  .search input { 
+    font-size: 1.2rem;
+  }
   .search form input {
     padding: 12px;  
     margin-right: -10px;
@@ -209,14 +223,23 @@
     margin-left: 60px;
     width: 80%;
   }
+  .songDisplay .track-info {
+    width: 340px;
+  }
+  .songDisplay .track-time {
+    width: calc(100% - 385px);
+  }
+  .songDisplay .tracks {
+    padding: 10px 7px 0px 20px;
+  }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 535px) {
   .search input { 
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     margin-left: 38px;
   }
-  .songDisplay .track-info.title {
+  .search .songDisplay .track-info.title {
     font-size: 15px;
   }
   .search #btnSearch img {
@@ -226,5 +249,14 @@
   .search #btnDelete img {
     width: 1em; 
     height: 1em;
+  }
+  .search #topTitle {
+    font-size: 1.2rem;
+  }
+  .songDisplay .track-info {
+    width: 220px;
+  }
+  .songDisplay .track-time {
+    width: calc(100% - 265px);
   }
 }
