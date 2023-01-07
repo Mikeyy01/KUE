@@ -53,6 +53,7 @@ function Confirm() {
             id: todos.length > 0 ? todos[todos.length - 1].id + 1 : 1,
             todo: newTodo,
             completed: false,
+            status: 'requested',
             timestamp: formattedDate
         };
         //POST new task

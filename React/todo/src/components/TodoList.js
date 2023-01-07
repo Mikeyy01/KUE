@@ -108,14 +108,9 @@ const toggleComplete = todo => {
 
 
     return <div>
-        {/*<InputText*/}
-        {/*    newTodo={newTodo}*/}
-        {/*    setNewTodo={setNewTodo}*/}
-        {/*    handleNewTodo={handleNewTodo}*/}
-        {/*/>*/}
         {todos.map((todo) =>
             editableTodo && editableTodo.id === todo.id ? (
-                    <div key={todo.id} style={{ display: "flex", margin: "8px" }}>
+                    <div className="todo" key={todo.id} style={{ display: "flex", margin: "8px" }}>
             <form onSubmit={handleEditTodo}>
                 <input
                     type="text"
@@ -131,14 +126,19 @@ const toggleComplete = todo => {
                 <button onClick={() => setEditableTodo(null)}>X</button>
                     </div>
                 ) : (
-                <div key={todo.id} style={{ display: "flex", margin: "8px" }}>
-                    <h3>{todo.todo.artist}</h3>
+                <div key={todo.id} className="todo" style={{ display: "flex", margin: "8px" }}>
+                    <h3 style={{ textDecoration: todo.completed ? "line-through" : "none" }}>
+                        {todo.todo.artist}
+                    </h3>
                     <p style={{ textDecoration: todo.completed ? "line-through" : "none" }}>
                         {todo.todo.track}
                     </p>
+                    <p style={{ textDecoration: todo.completed ? "line-through" : "none" }}>
+                        {todo.timestamp}
+                    </p>
                     <img src={todo.todo.coverArtURL} alt="cover art" />
-                    <button onClick={() => toggleComplete(todo)}>V</button>
-                    <button onClick={() => handleDelete(todo)}>X</button>
+                    <button onClick={() => toggleComplete(todo)} className="accept-button">V</button>
+                    <button onClick={() => handleDelete(todo)} className="delete-button">X</button>
                 </div>
         ))}
     </div>

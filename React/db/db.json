@@ -1,34 +1,26 @@
 {
   "todos": [
     {
-      "id": 8,
+      "id": 11,
       "todo": {
-        "artist": "Drake",
-        "track": "Right Hand",
-        "coverArtURL": "https://i.scdn.co/image/ab67616d00004851c1c3c30049659824bdac476b"
+        "artist": "Lil Uzi Vert",
+        "track": "20 Min",
+        "coverArtURL": "https://i.scdn.co/image/ab67616d000048510d5a84e4e47399d2726c330c"
       },
       "completed": false,
-      "timestamp": "1/6/2023 10:06:26 AM"
+      "status": "requested",
+      "timestamp": "1/7/2023 2:39:37 AM"
     },
     {
-      "id": 9,
+      "id": 12,
       "todo": {
-        "artist": "Brenda Lee",
-        "track": "Rockin' Around The Christmas Tree",
-        "coverArtURL": "https://i.scdn.co/image/ab67616d000048517845f74d6db14b400fa61cd3"
+        "artist": "Kanye West",
+        "track": "Stronger",
+        "coverArtURL": "https://i.scdn.co/image/ab67616d0000485126f7f19c7f0381e56156c94a"
       },
       "completed": false,
-      "timestamp": "1/6/2023 10:16:57 AM"
-    },
-    {
-      "id": 10,
-      "todo": {
-        "artist": "JACKBOYS",
-        "track": "GATTI",
-        "coverArtURL": "https://i.scdn.co/image/ab67616d00004851dfc2f59568272de50a257f2f"
-      },
-      "completed": false,
-      "timestamp": "1/6/2023 10:18:01 AM"
+      "status": "requested",
+      "timestamp": "1/7/2023 3:01:42 AM"
     }
   ]
 }
