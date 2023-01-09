@@ -1,6 +1,41 @@
 {
   "todos": [
     {
+<<<<<<< HEAD
+      "id": 3,
+      "todo": {
+        "artist": "Harry Styles",
+        "track": "As It Was",
+        "coverArtURL": "https://i.scdn.co/image/ab67616d00004851b46f74097655d7f353caab14"
+=======
+      "id": 1,
+      "todo": {
+        "artist": "Andy Williams",
+        "track": "It's the Most Wonderful Time of the Year",
+        "coverArtURL": "https://i.scdn.co/image/ab67616d0000485198073965947f92f1641b8356"
+>>>>>>> 8ae7e54eda4552b97a77a9760bbe41c0d2ef9c6e
+      },
+      "completed": false,
+      "status": "Approved",
+<<<<<<< HEAD
+      "timestamp": "1/9/2023 1:51:03 AM"
+    },
+    {
+=======
+      "timestamp": "1/9/2023 12:04:30 AM"
+    },
+    {
+      "id": 2,
+      "todo": {
+        "artist": "Ariana Grande",
+        "track": "Santa Tell Me",
+        "coverArtURL": "https://i.scdn.co/image/ab67616d00004851fb704b7e832b40f08c14629c"
+      },
+      "completed": false,
+      "status": "requested",
+      "timestamp": "1/9/2023 12:09:03 AM"
+    },
+    {
       "id": 3,
       "todo": {
         "artist": "Harry Styles",
@@ -8,10 +43,22 @@
         "coverArtURL": "https://i.scdn.co/image/ab67616d00004851b46f74097655d7f353caab14"
       },
       "completed": false,
-      "status": "Approved",
+      "status": "requested",
       "timestamp": "1/9/2023 1:51:03 AM"
     },
     {
+      "id": 4,
+      "todo": {
+        "artist": "Ariana Grande",
+        "track": "Santa Tell Me",
+        "coverArtURL": "https://i.scdn.co/image/ab67616d00004851fb704b7e832b40f08c14629c"
+      },
+      "completed": false,
+      "status": "requested",
+      "timestamp": "1/9/2023 2:11:52 AM"
+    },
+    {
+>>>>>>> 8ae7e54eda4552b97a77a9760bbe41c0d2ef9c6e
       "id": 5,
       "todo": {
         "artist": "Travis Scott",
@@ -65,6 +112,7 @@
       "completed": false,
       "status": "requested",
       "timestamp": "1/9/2023 3:37:26 AM"
+<<<<<<< HEAD
     },
     {
       "id": 10,
@@ -76,6 +124,8 @@
       "completed": false,
       "status": "requested",
       "timestamp": "09/01/2023 03:50:08"
+=======
+>>>>>>> 8ae7e54eda4552b97a77a9760bbe41c0d2ef9c6e
     }
   ]
 }
