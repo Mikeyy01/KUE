@@ -98,8 +98,10 @@ const toggleComplete = todo => {
             <div className='todoBody'>
                 <header className='headerLogo'>
                     <img className= "logoHdr" src={logoHeader} width ="30%" height="30%" />
+                    <a className='welcomeText'>
                     <h2>Welcome DJ&nbsp;</h2>
                     <h2 id="djcode"></h2>
+                    </a>
 
                 </header>
                 <h1>Request List</h1>
@@ -122,7 +124,7 @@ const toggleComplete = todo => {
                         return true;
                     }
                 }).map((todo) =>
-                        <div key={todo.id} className="todo" style={{ display: "flex", margin: "20px" , justifyContent : 'center' , alignItems: 'center', background: todo.completed ? "#D3D3D3" : "" }}>
+                        <div key={todo.id} className="todo" style={{ background: todo.completed ? "#D3D3D3" : "" }}>
                             <img className="albumCover" src={todo.todo.coverArtURL} alt="cover art"  />
                             <p className="songName">
                                 {todo.todo.track}

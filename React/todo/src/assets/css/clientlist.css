@@ -11,13 +11,13 @@
     border-bottom: 2px solid transparent;
 }
 
-h2{
+/*h2{
     position: relative;
     left: 330px;
     font-size: 3rem;
     bottom: 100px;
     color: white;
-}
+}*/
 .todoBody{
     display: grid;
     justify-content: center;
@@ -143,6 +143,14 @@ h1{
     color: white;
     text-align: center;
     font-weight: bold;
+}
+
+
+@media screen and (max-width: 400px) {
+    a img .logo__ {
+        width: 20px;
+        height: 20px;
+    }
 }
 
 @media screen and (max-width: 500px) {

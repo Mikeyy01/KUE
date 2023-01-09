@@ -103,61 +103,64 @@ const InputText = () => {
     }
 
     return (
-                <section className="search">
-            <div className="container">
-                <header>
-                    <a onClick={returnHome} href="/">
-                        <img src={kue2} alt="logo" />
-                    </a>
-                </header>
-                <div className="songDisplay">
-                    <form id="searchForm" autoComplete="off" onSubmit={spotifySearch}>
-                        <button id="btnSearch">
-                            <img src={searchIcon}  alt="search icon" />
-                        </button>
-                        <input
-                            type="text"
-                            name="searchInput"
-                            id="input"
-                            onChange={Input}
-                            value={inputValue}
-                            placeholder="What song would you like to request?"
-                        />
-                        {inputValue ? (
-                            <img src={deleteIcon} style={{width: '15px'}} alt="Delete icon" onClick={ClearInput}/>
-                        ) : null}
-                        <button
-                            type="submit"
-                            className="btnDelete"
-                            >
-                        </button>
-                    </form>
-                    {tracks.map((track) => (
-                        <div onClick={() => TrackSelect(track.artists[0].name, track.name, track.album.images[2].url)}>
-                        <div key={track.id} className="tracks">
-                            <div id={track.id}>
-                                <div className="track-row">
-                                    <img src={track.album.images[2].url} alt="cover art" />
-                                    <div className="track-info">
-                                        <ul className="info" onClick={TrackSelect}>
-                                            <li className="title" id="trackName">{track.name}</li>
-                                            <li className="artist">{track.artists[0].name}</li>
-                                        </ul>
-                                    </div>
-                                    <div className="track-time">
-                                        <p className="time">{msToMinutesAndSeconds(track.duration_ms)}</p>
+
+        <div className='searchContainer'>
+            <section className="search">
+                <div className="container">
+                    <header>
+                        <a onClick={returnHome} href="/">
+                            <img src={kue2} alt="logo" />
+                        </a>
+                    </header>
+                    <div className="songDisplay">
+                        <form id="searchForm" autoComplete="off" onSubmit={spotifySearch}>
+                            <button id="btnSearch">
+                                <img src={searchIcon}  alt="search icon" />
+                            </button>
+                            <input 
+                                type="text"
+                                name="searchInput"
+                                id="input"
+                                onChange={Input}
+                                value={inputValue}
+                                placeholder="What song would you like to request?"
+                            />
+                            {inputValue ? (
+                                <img src={deleteIcon} style={{width: '15px'}} alt="Delete icon" onClick={ClearInput}/>
+                            ) : null}
+                            <button
+                                type="submit"
+                                className="btnDelete"
+                                >
+                            </button>
+                        </form>
+                        {tracks.map((track) => (
+                            <div onClick={() => TrackSelect(track.artists[0].name, track.name, track.album.images[2].url)}>
+                            <div key={track.id} className="tracks">
+                                <div id={track.id}>
+                                    <div className="track-row">
+                                        <img src={track.album.images[2].url} alt="cover art" />
+                                        <div className="track-info">
+                                            <ul className="info" onClick={TrackSelect}>
+                                                <li className="title" id="trackName">{track.name}</li>
+                                                <li className="artist">{track.artists[0].name}</li>
+                                            </ul>
+                                        </div>
+                                        <div className="track-time">
+                                            <p className="time">{msToMinutesAndSeconds(track.duration_ms)}</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        </div>
-                    ))}
-                    <div className="songDisplay"></div>
+                            </div>
+                        ))}
+                        <div className="songDisplay"></div>
 
-                    <footer></footer>
+                        <footer></footer>
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        </div>
     );
 }
 export default InputText;

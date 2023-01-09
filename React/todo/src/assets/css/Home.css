@@ -32,6 +32,7 @@
 
 .wrapper {
     width: 100%;
+    margin-top: -10%;
 }
 
 .blob {
@@ -64,14 +65,15 @@
     margin-bottom: 12%;
     width: 6%;
     max-width: 100%;
-    margin-top: 5%;
+    margin-top: 7%;
     height: auto;
 }
 
 .blob .ClubLine {
-    position: relative;
-    top: 0;
-    left: 0;
+    border-image: linear-gradient(to right, rgba(255, 255, 255, 0.47) 0%, rgb(220, 20, 122) 50%, rgb(142, 118, 157) 100%) 1 / 1 / 0 stretch;
+    margin: 0px;
+    border-bottom: 2px solid transparent;
+    
 }
 
 .blob .Club {
@@ -80,11 +82,12 @@
     margin-right: auto;
     width: 15%;
     margin-top: 5%;
+    margin-bottom:5%;
 }
 
 
 
-.blob .line2 {
+.blob .line1 {
     z-index: 1;
     position: relative;
     width: 100%;
@@ -99,8 +102,10 @@
     background: linear-gradient(90deg, rgba(103, 168, 175, 1) 0%, rgba(234, 2, 120, 1) 50%, rgba(97, 226, 186, 1) 80%);
 }
 
-.blob .text1 {
-    font-size: 4vw;
+.blob .text1 h1{
+    font-size: 6vw;
+    padding-top: 50px;
+    font-family: Proxima Bold;
     position: relative;
     text-align: center;
     text-transform: uppercase;
@@ -112,6 +117,8 @@
 
 }
 
+
+
 @keyframes animation {
     to {
         background-position: 4500vh;
@@ -119,14 +126,17 @@
     }
 }
 
-.blob .text2 {
+.blob .text2 h3 {
+
     margin-left: 5%;
     margin-right: 5%;
     text-align: center;
     margin-top: 20px;
     position: relative;
     color: white;
+    
 }
+
 
 
 .blob .search-button {
@@ -159,6 +169,7 @@
     letter-spacing: 0.1em;
     cursor: pointer;
     line-height: 1;
+    transition: 400ms ease-in-out;
 }
 
 .blob button img {
@@ -167,13 +178,24 @@
     margin-bottom: 10px;
 }
 
-.blob .search-button:hover {}
+.blob button:hover {
+    background: transparent;
+    border: 1px solid;
+    border-color: aliceblue;
+}
+.text2 h3{
+    font-size: 1.8rem ;
+}
 
-@media only screen and (min-width: 456px) {
+@media only screen and (max-width: 456px) {
     /* styles for screens with a maximum width of 600px go here */
     .blob .section1 {
-        width: 50%;
+        width: 100%;
         margin: 0 auto;
+    }
+    .text2 h3{
+        font-size: 1.3rem ;
+        font-weight: lighter;
     }
 
 }

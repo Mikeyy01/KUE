@@ -35,18 +35,18 @@ const ClientQueue = () => {
     }
 
     return <div>
-        <div className="blob">
+        <div className="blob2">
             <div className='containerBody'>
             <div className='todoBody'>
             <section className="section1">
                 <div className="wrapper">
-                    <label className="logo2">
+                    <label className="logo_2">
                         <a onClick={returnHome} href="/">
-                            <img className="logo" src={KueLogo2} height="" alt="Logo"/>
+                            <img className="logo__" src={KueLogo2} height="" alt="Logo"/>
                         </a>
                     </label>
                 </div>
-                <div className="ClubLine">
+                <div className="ClubLine2">
                     <img className="X" src={XLogo} width="2%" height="auto" alt="X"/>
                     <img className="Club" src={ClubLogo} width="2%" height="auto" alt="Club"/>
                 </div>
@@ -54,10 +54,7 @@ const ClientQueue = () => {
 
 
             <section className="homepage-buttons">
-                <div className="outline">
-                    <div className="line1"></div>
-                    <div className="line2"></div>
-                </div>
+             
                 <div className="text2">
                     <h1>
                         Current Queue

@@ -11,8 +11,14 @@
     margin: 0px;
     border-bottom: 2px solid transparent;
 }
+/* .todo {
+    display: flex;
+    margin: 50px;
+    justify-content: center;
+    align-items: center;
+} */
 
-h2{
+.welcomeText h2 {
     position: relative;
     left: 330px;
     font-size: 3rem;
@@ -64,6 +70,7 @@ color: white;
 
 option{
     color: black;
+    position: fixed;
 }
 
 select {
@@ -78,14 +85,19 @@ select {
     border-color: transparent;
     border-image: initial;
     color: white;
+    text-align: center;
 
 }
 /* items styles */
 .todo{
+    display: flex;
+    margin: 50px;
+    justify-content: center;
+    align-items: center;
     color: white;
     box-shadow: none;
     cursor: pointer;
-    margin: 0;
+    margin: 20px;
     padding: 35px;
     font-size: 1em;
     font-family: Proxima;
@@ -168,11 +180,26 @@ h1{
 
 @media screen and (max-width: 590px) {
 
+    .logoHdr  {
+        align-items: center;
+        position: relative;
+        left: 18rem;
+    }
+
+    .welcomeText h2 {
+        position: relative;
+        left: 330px;
+        font-size: 2rem;
+        bottom: 30px;
+        color: white;
+    }
+
     .todoBody .todo {
         transform: scale(0.6);
     }
 
     .todoBody .dropDown {
+    
         transform: scale(0.6);
     }
 }
@@ -201,13 +228,39 @@ h1{
 }
 
 @media screen and (max-width: 440px) {
+    h1 {
+        padding-top: 20px;
+        font-size: 1.6rem;
+    }
+
+    .logoHdr  {
+        align-items: center;
+        position: relative;
+        left: 17rem;
+    }
+
+    .welcomeText h2 {
+        position: relative;
+        left: 308px;
+        font-size: 2rem;
+        bottom: 30px;
+        color: white;
+    }
+    .todo{
+        margin: -5px;
+    }
 
     .todoBody .todo {
         transform: scale(0.45);
+       
     }
     .todoBody .dropDown {
+        left: -1rem;
+        position: relative;
         transform: scale(0.45);
     }
+
+    
 
 }
 
