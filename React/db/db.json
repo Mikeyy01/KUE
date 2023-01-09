@@ -1,131 +1,15 @@
 {
   "todos": [
     {
-<<<<<<< HEAD
-      "id": 3,
-      "todo": {
-        "artist": "Harry Styles",
-        "track": "As It Was",
-        "coverArtURL": "https://i.scdn.co/image/ab67616d00004851b46f74097655d7f353caab14"
-=======
-      "id": 1,
-      "todo": {
-        "artist": "Andy Williams",
-        "track": "It's the Most Wonderful Time of the Year",
-        "coverArtURL": "https://i.scdn.co/image/ab67616d0000485198073965947f92f1641b8356"
->>>>>>> 8ae7e54eda4552b97a77a9760bbe41c0d2ef9c6e
-      },
-      "completed": false,
-      "status": "Approved",
-<<<<<<< HEAD
-      "timestamp": "1/9/2023 1:51:03 AM"
-    },
-    {
-=======
-      "timestamp": "1/9/2023 12:04:30 AM"
-    },
-    {
-      "id": 2,
-      "todo": {
-        "artist": "Ariana Grande",
-        "track": "Santa Tell Me",
-        "coverArtURL": "https://i.scdn.co/image/ab67616d00004851fb704b7e832b40f08c14629c"
-      },
-      "completed": false,
-      "status": "requested",
-      "timestamp": "1/9/2023 12:09:03 AM"
-    },
-    {
-      "id": 3,
-      "todo": {
-        "artist": "Harry Styles",
-        "track": "As It Was",
-        "coverArtURL": "https://i.scdn.co/image/ab67616d00004851b46f74097655d7f353caab14"
-      },
-      "completed": false,
-      "status": "requested",
-      "timestamp": "1/9/2023 1:51:03 AM"
-    },
-    {
-      "id": 4,
-      "todo": {
-        "artist": "Ariana Grande",
-        "track": "Santa Tell Me",
-        "coverArtURL": "https://i.scdn.co/image/ab67616d00004851fb704b7e832b40f08c14629c"
-      },
-      "completed": false,
-      "status": "requested",
-      "timestamp": "1/9/2023 2:11:52 AM"
-    },
-    {
->>>>>>> 8ae7e54eda4552b97a77a9760bbe41c0d2ef9c6e
       "id": 5,
       "todo": {
         "artist": "Travis Scott",
         "track": "sdp interlude",
         "coverArtURL": "https://i.scdn.co/image/ab67616d00004851f54b99bf27cda88f4a7403ce"
       },
-      "completed": false,
-      "status": "requested",
-      "timestamp": "1/9/2023 3:04:06 AM"
-    },
-    {
-      "id": 6,
-      "todo": {
-        "artist": "Drake",
-        "track": "Broke Boys",
-        "coverArtURL": "https://i.scdn.co/image/ab67616d0000485102854a7060fccc1a66a4b5ad"
-      },
-      "completed": false,
-      "status": "requested",
-      "timestamp": "1/9/2023 3:17:43 AM"
-    },
-    {
-      "id": 7,
-      "todo": {
-        "artist": "Harry Styles",
-        "track": "As It Was",
-        "coverArtURL": "https://i.scdn.co/image/ab67616d00004851b46f74097655d7f353caab14"
-      },
-      "completed": false,
-      "status": "requested",
-      "timestamp": "1/9/2023 3:28:34 AM"
-    },
-    {
-      "id": 8,
-      "todo": {
-        "artist": "d4vd",
-        "track": "Here With Me",
-        "coverArtURL": "https://i.scdn.co/image/ab67616d00004851efbe96040319db682b438f11"
-      },
-      "completed": false,
-      "status": "requested",
-      "timestamp": "1/9/2023 3:28:50 AM"
-    },
-    {
-      "id": 9,
-      "todo": {
-        "artist": "Jason Weaver",
-        "track": "I Just Can't Wait to Be King - From \"The Lion King\" Soundtrack",
-        "coverArtURL": "https://i.scdn.co/image/ab67616d00004851660aadbda2da6b1c2dd3d1a5"
-      },
-      "completed": false,
-      "status": "requested",
-      "timestamp": "1/9/2023 3:37:26 AM"
-<<<<<<< HEAD
-    },
-    {
-      "id": 10,
-      "todo": {
-        "artist": "Lady Gaga",
-        "track": "Bloody Mary",
-        "coverArtURL": "https://i.scdn.co/image/ab67616d00004851a47c0e156ea3cebe37fdcab8"
-      },
-      "completed": false,
-      "status": "requested",
-      "timestamp": "09/01/2023 03:50:08"
-=======
->>>>>>> 8ae7e54eda4552b97a77a9760bbe41c0d2ef9c6e
+      "completed": true,
+      "status": "Approved",
+      "timestamp": "1/8/2023 1:21:24 AM"
     }
   ]
 }
