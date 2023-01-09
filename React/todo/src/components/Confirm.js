@@ -120,10 +120,13 @@ function Confirm() {
                         <img src={kuelogo} alt="logo" />
                     </a>
                 </header>
-                <div className="line" />
+                
 
                 <div className="confirmation">
                     <p className="confirm">Confirm Request</p>
+                    <div className='trackInfo'>
+
+                   
 
                     <div className="track-row">
                         <img id="searchedTrackImg" />
@@ -133,8 +136,8 @@ function Confirm() {
                             </ul>
                         </div>
                     </div>
-                    <h2>€ 10</h2>
-
+                    <h2 className='confirm__price'>€ 10</h2>
+                    </div>
                     <form onSubmit={handleNewTodo}>
                         <div className="dropdown">
                             <div className="dropdownField" onClick={toggleSelectList}>

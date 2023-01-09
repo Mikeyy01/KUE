@@ -6,10 +6,10 @@ import tick from '../assets/images/tick.png';
 function Pending() {
     return (
         <body>
-        <article>
-            <img className="logo" src={logo3} alt="logo" />
+        <article className='pending__logo__article'>
+            <img className="pending__logo" src={logo3} alt="logo" />
         </article>
-        <div className="line" />
+        
 
         <h1>Request Sent!</h1>
         <br />

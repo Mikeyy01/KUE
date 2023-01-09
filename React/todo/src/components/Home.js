@@ -35,6 +35,7 @@ function Home(props) {
 
 
     return (
+
         <div className="blob">
             <section className="section1">
                 <div className="wrapper">
@@ -45,17 +46,14 @@ function Home(props) {
                     </label>
                 </div>
                 <div className="ClubLine">
-                    <img className="X" src={XLogo} width="2%" height="auto" alt="X"/>
-                    <img className="Club" src={ClubLogo} width="2%" height="auto" alt="Club"/>
+                    <img className="X" src={XLogo}  alt="X"/>
+                    <img className="Club" src={ClubLogo} alt="Club"/>
                 </div>
             </section>
 
 
             <section className="homepage-buttons">
-                <div className="outline">
-                    <div className="line1"></div>
-                    <div className="line2"></div>
-                </div>
+              
                 <div className="text1">
                     <h1>{randomText}</h1>
                 </div>

@@ -115,7 +115,7 @@ const InputText = () => {
                         <button id="btnSearch">
                             <img src={searchIcon}  alt="search icon" />
                         </button>
-                        <input
+                        <input 
                             type="text"
                             name="searchInput"
                             id="input"

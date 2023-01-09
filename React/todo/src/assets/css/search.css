@@ -34,7 +34,7 @@
   background: linear-gradient(90deg, rgba(99,77,160,1) 0%, rgba(85,20,72,1) 100%);
   border-radius: 40px;
   position: relative;
-  margin-bottom: 50px;
+  margin-bottom: 6px;
 }
 
 /* logo */
@@ -217,7 +217,7 @@
   .search form input {
     padding: 12px;
     margin-right: -10px;
-    margin-left: 60px;
+    margin-left: 35px;
     width: 80%;
   }
   .songDisplay .track-info {
@@ -227,8 +227,9 @@
     width: calc(100% - 385px);
   }
   .songDisplay .tracks {
-    padding: 10px 7px 0px 20px;
+    padding: 10px 6px 0px 15px;
   }
+    
 }
 
 @media (max-width: 535px) {
@@ -240,8 +241,8 @@
     font-size: 15px;
   }
   .search #btnSearch img {
-    width: 1em;
-    height: 1em;
+    width: 1.5em;
+    height: 1.5em;
   }
   .search #topTitle {
     font-size: 1.2rem;
@@ -286,15 +287,17 @@
 
 @media (max-width: 535px) {
   .search input {
-    font-size: 0.9rem;
+    font-size: 1.2rem;
     margin-left: 38px;
   }
   .search .songDisplay .track-info.title {
     font-size: 15px;
   }
   .search #btnSearch img {
-    width: 1em;
-    height: 1em;
+    width: 1.4em;
+    height: 1.4em;
+    margin-right:0px;
+    
   }
   .search #topTitle {
     font-size: 1.2rem;
@@ -304,5 +307,8 @@
   }
   .songDisplay .track-time {
     width: calc(100% - 265px);
+  }
+  ::placeholder {
+    font-size: 1rem;
   }
 }

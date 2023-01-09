@@ -11,13 +11,13 @@
     border-bottom: 2px solid transparent;
 }
 
-h2{
+/*h2{
     position: relative;
     left: 330px;
     font-size: 3rem;
     bottom: 100px;
     color: white;
-}
+}*/
 .todoBody{
     display: grid;
     justify-content: center;
