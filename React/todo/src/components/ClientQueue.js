@@ -6,6 +6,9 @@ import ClubLogo from '../assets/images/Club.svg'
 import '../assets/css/list.css';
 import {useState, useEffect} from "react";
 import axios from "axios";
+import logoHeader from "../assets/images/logo.png";
+import acceptBtn from "../assets/images/accept.png";
+import declineBtn from "../assets/images/decline.png";
 const { REACT_APP_BACKEND_URL } = process.env
 
 //Client Queue List functions
@@ -35,55 +38,37 @@ const ClientQueue = () => {
     }
 
     return <div>
-        <div className="blob2">
-            <div className='containerBody'>
+        <div className='containerBody'>
+
             <div className='todoBody'>
-            <section className="section1">
-                <div className="wrapper">
-                    <label className="logo_2">
-                        <a onClick={returnHome} href="/">
-                            <img className="logo__" src={KueLogo2} height="" alt="Logo"/>
-                        </a>
-                    </label>
-                </div>
-                <div className="ClubLine2">
-                    <img className="X" src={XLogo} width="2%" height="auto" alt="X"/>
-                    <img className="Club" src={ClubLogo} width="2%" height="auto" alt="Club"/>
-                </div>
-            </section>
+                <header className='headerLogo'>
+                    <img className= "logoHdr" src={logoHeader} width ="30%" height="30%" />
+                    <a className='welcomeText'>
+                        <h2>Queue List</h2>
+                    </a>
 
+                </header>
 
-            <section className="homepage-buttons">
-             
-                <div className="text2">
-                    <h1>
-                        Current Queue
-                    </h1>
-                </div>
-                <main>
-                    {todos
-                        .filter(todo => todo.status === "Approved")
-                        .map((todo) =>
-                            (
-                                <div key={todo.id} className="todo" style={{ display: "flex", margin: "20px" , justifyContent : 'center' , alignItems: 'center'}}>
-                                    <img className="albumCover" src={todo.todo.coverArtURL} alt="cover art"  />
-                                    <p className="songName">
-                                        {todo.todo.track}
-                                    </p>
-                                    <h3 className="artistName">
-                                        {todo.todo.artist}
-                                    </h3>
-                                    <p className="timeStamp">
-                                        {todo.timestamp}
-                                    </p>
+                {todos
+                    .filter(todo => todo.status === "Approved")
+                    .map((todo) =>
+                    <div key={todo.id} className="todo">
+                        <img className="albumCover" src={todo.todo.coverArtURL} alt="cover art"  />
+                        <p className="songName">
+                            {todo.todo.track}
+                        </p>
+                        <h3 className="artistName">
+                            {todo.todo.artist}
+                        </h3>
+                        <p className="timeStamp">
+                            {todo.timestamp}
+                        </p>
 
-                                </div>
-                            ))}
-                </main>
-            </section>
-            <footer></footer>
-    </div>
+                    </div>
+                )}
+
             </div>
+
         </div>
     </div>
 };
