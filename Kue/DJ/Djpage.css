@@ -1,0 +1,115 @@
+@font-face {
+    font-family: Proxima;
+    src: url(ProximaNova-Light.otf) format(opentype);
+    font-weight: lighter;
+    text-decoration: none!important;
+}
+@font-face {
+    font-family: Proxima;
+    src: url(ProximaNova-Bold.otf) format(opentype);
+    font-weight: bold;
+    text-decoration: none!important;
+
+}
+body {
+    background:linear-gradient(56deg, #551448 0%, #000000 50%, #551448 100%);
+    /* width: 700px;
+    height: 700px; */
+    width: 100vw; 
+    height: 100vh;
+    display:grid;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    background-repeat: no-repeat;
+    flex-wrap: wrap;
+
+} 
+#header {
+    display: flex;
+    background-color: rgb(14, 5, 170);
+    font-size: 15px;
+    
+}
+.kue {
+    width: 170px;
+    height: 120px;
+    margin-left: 10px;
+}
+/* .logOut{
+    width: 30px;
+    height: 30px;
+    position: relative;
+    left: 420px;
+    top: 35px;
+    
+} */
+h2 {
+    position: relative;
+    top: 10px;
+    color: white;
+}
+.djTips{
+    position: relative;
+    top: 40px;
+    left: -180px;
+    color: white;
+}
+
+#dropdown {
+    /* width: 800px; */
+    display: flex;
+    justify-content: right;
+    background-color: none;
+}
+#showReq{
+    display: flex;
+    justify-content: center;
+    width: 600px;
+    height: 500px;
+  
+    background-color: red;
+}
+#showAcc{
+    background-color: purple;
+    display: flex;
+    justify-content: center;
+    width: 600px;
+    height: 500px;
+    
+}
+#showRej{
+    background-color: green;
+    display: flex;
+    justify-content: center;
+    width: 600px;
+    height: 500px;
+}
+#showPlayed{
+    background-color: maroon;
+    display: flex;
+    justify-content: center;
+    width: 600px;
+    height: 500px;
+}
+#showAll{  /*   #3 ALL  */
+    background-color: yellow;
+    display: flex;
+    justify-content: center;
+    width: 600px;
+    height: 500px;
+}
+
+/*   target page */
+.pageOption{
+    display: grid;
+    font-size: 20px;
+} 
+.containerDJ{
+    display: grid;
+    /* background-color: rgb(137, 137, 137); */
+    font-size: 20px;
+    margin: 0px;
+}
+  
+  

@@ -21,6 +21,17 @@
       "completed": true,
       "status": "Approved",
       "timestamp": "1/10/2023 11:07:27 PM"
+    },
+    {
+      "id": 14,
+      "todo": {
+        "artist": "MAX",
+        "track": "IT'S YOU (feat. keshi)",
+        "coverArtURL": "https://i.scdn.co/image/ab67616d000048518860c8336fa14e6b031c5b84"
+      },
+      "completed": true,
+      "status": "Approved",
+      "timestamp": "1/11/2023 12:35:24 AM"
     }
   ]
 }
