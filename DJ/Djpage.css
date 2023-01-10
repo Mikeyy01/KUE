@@ -22,10 +22,11 @@ body {
     align-items: center;
     margin: 0;
     background-repeat: no-repeat;
-    flex-wrap: wrap;
+    background-attachment: fixed;
+    
 
 } 
-#header {
+#header { 
     display: flex;
     background-color: rgb(14, 5, 170);
     font-size: 15px;
@@ -113,3 +114,16 @@ h2 {
 }
   
   
+select {
+    border-radius: 20px;
+    background-color: #674a4a;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    padding: 0.4em;
+    border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
+    border-image-slice: 1 ;
+    border-width: 2px;
+}
+
+.select
