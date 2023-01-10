@@ -1,0 +1,26 @@
+{
+  "todos": [
+    {
+      "id": 12,
+      "todo": {
+        "artist": "BLACKPINK",
+        "track": "Shut Down",
+        "coverArtURL": "https://i.scdn.co/image/ab67616d000048514aeaaeeb0755f1d8a8b51738"
+      },
+      "completed": true,
+      "status": "Approved",
+      "timestamp": "1/10/2023 9:09:32 PM"
+    },
+    {
+      "id": 13,
+      "todo": {
+        "artist": "Bad Bunny",
+        "track": "Me Porto Bonito",
+        "coverArtURL": "https://i.scdn.co/image/ab67616d0000485149d694203245f241a1bcaa72"
+      },
+      "completed": true,
+      "status": "Approved",
+      "timestamp": "1/10/2023 11:07:27 PM"
+    }
+  ]
+}
