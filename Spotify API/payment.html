@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <title>Kue - Confirm</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/payment.css">
+    <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/proxima-nova-2">
+<body>
+    <section class="payment">
+
+        <div class="container">
+            <!-- logo direct back to homepage -->
+            <header><a href="index.html"><img src="images/logo.png"></a></header>
+            <div class="line"></div>
+            
+            <div class="confirmation">
+                <p class="confirm">Confirm Request</p>
+
+                <!-- track info -->
+                <div class="track-row">
+                    <img id="searchedTrackImg">
+
+                    <div class="track-info">
+                        <ul class="info">
+                            <li class="name" id="searchedTrackName"></li>
+                            <li class="artist" id="searchedTrackArtist"></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- fee -->
+                <h2>€ 2,50</h2>
+
+                <!-- payment dropdown -->
+                <form action="pending.html">
+                    <div class="dropdown">
+                        <div class="dropdownField" onclick="clicked()">
+                            <p id="selectText" style="padding-top: 12px;">Choose your bank</p>
+                            <img src="images/arrow.png" id="arrow">
+                        </div>
+
+                        <ul id="select" class="hide">
+                            <li></li>
+                            <li></li>
+                            <li class="blackBG"></li>
+                            <li class="options" value="bank">
+                                <img src="images/abn_amro.png">
+                                <p>ABN Amro</p>
+                            </li>
+                            <li class="options" value="bank">
+                                <img src="images/ing.png">
+                                <p>ING</p>
+                            </li>
+                            <li class="options" value="bank">
+                                <img src="images/rabobank.png">
+                                <p>Rabobank</p>
+                            </li>
+                            <li class="options" value="bank">
+                                <img src="images/revolut.svg">
+                                <p>Revolut</p>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <input type="submit" value="Confirm and Pay" id="submit" style="display: none;" href="pending.html">
+                </form>
+            </div>
+
+            <footer></footer>
+        </div>
+        
+    </section>
+
+    <script src="js/payment.js"></script>
+
+</body>
+
+</html>
