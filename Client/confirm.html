@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <title>Kue - Confirm</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+    <link rel="icon" type="image/x-icon" href="" />
+</head>
+
+<body>
+    <header>
+        <button>&#127968;</button>
+        <h1>Confirm Request</h1>
+    </header>
+    <main>
+        <img src="cover.png">
+        <br>
+        <h2>Song Selected:</h2>
+        <h3 id="result"></h3>
+        <h2>Request Fee: 10€</h2>
+        <form action="pending.html">
+            <select class="bank">
+                <option value="selected" name="option">Choose your bank</option>
+                <option value="2" name="option">ABN Amro</option>
+                <option value="2" name="option">ING</option>
+                <option value="2" name="option">Rabobank</option>
+                <option value="2" name="option">Revolut</option>
+            </select>
+            <input type="submit" value="Confirm and Pay" name='pay' hidden href="pending.html">
+        </form>
+    </main>
+    <footer></footer>
+    <script type="text/javascript">
+        document.getElementById("result").innerHTML = localStorage.getItem("textvalue");
+
+        $(".bank").change(function() {
+            var button = $(this).next("input");
+            if (this.value == "2") {
+                button.prop("hidden", false);
+            } else {
+                button.prop("hidden", true)
+            }
+        });
+
+    </script>
+</body>
+
+</html>
