@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dj main page</title>
+    <link rel="stylesheet" href="Djpage.css" />
+    <script type = "text/javascript" src="Djpage.js" defer ></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"  ></script>
+    
+  </head>
+
+  <body>
+    <div class="container-DJ">
+      <!-- text input -->
+      <div id="header" class="el--1">
+        <img class="kue" src="KueLogo.png" alt="Kue logo" />
+        <h2>Welcome DJ&nbsp;</h2>
+        <h2 id="djcode"></h2>
+        <!-- <img class="logOut" src="logout.png" alt="logout" /> -->
+        <!-- <h2 class="djTips">TIPS:</h2>
+        <h2 class="djTips">€40,00</h2> -->
+      </div>
+      <!-- dropdown -->
+      <div id="dropdown" class="el--2">
+        <select id="dropDown">
+          <option value="0" selected>All</option>
+          <option value="1">Requested</option>
+          <option value="2">Accepted</option>
+          <option value="3">Rejected</option>
+          <option value="4">Played</option>
+        </select>
+      </div>
+    </div>
+    <div class="pageOption">
+      <div style="display: grid" id="showAll" class="element"> 
+    
+      </div>
+      <div style="display: grid" id="showReq" class="element">
+        4 requested
+      </div>
+      <div style="display: grid" id="showAcc" class="element">5 accepted</div>
+      <div style="display: grid" id="showRej" class="element">6 rejected</div>
+      <div style="display: grid" id="showPlayed" class="element">
+        7 played
+      </div>
+
+      <!-- <script type = "text/javascript" >
+        document.getElementById("djcode").innerHTML =
+        localStorage.getItem("textvalue");
+      </script> -->
+
+  </body>
+</html>

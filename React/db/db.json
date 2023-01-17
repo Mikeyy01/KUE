@@ -1,0 +1,15 @@
+{
+  "todos": [
+    {
+      "id": 5,
+      "todo": {
+        "artist": "Travis Scott",
+        "track": "sdp interlude",
+        "coverArtURL": "https://i.scdn.co/image/ab67616d00004851f54b99bf27cda88f4a7403ce"
+      },
+      "completed": true,
+      "status": "Approved",
+      "timestamp": "1/8/2023 1:21:24 AM"
+    }
+  ]
+}
