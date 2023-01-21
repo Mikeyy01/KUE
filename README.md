@@ -11,14 +11,6 @@ A application which allows the user to request a song to the DJ with a click of 
 
 ## Setting up the Database
 
-Start up another terminal and enter the db directory by running
- ```cd db```
-
-Start the database by running 
-```json-server --watch db.json```
-
-## Starting the App
-
 Clone the repository to your local machine using
  ```git clone https://git.fhict.nl/I476238/kue.git```
 
@@ -27,9 +19,16 @@ Clone the repository to your local machine using
 Change directory into the project by running 
 ```cd kue```
 
-  
 
-Enter the todo directory by running
+Start up a terminal and enter the db directory by running
+ ```cd db```
+
+Start the database by running 
+```json-server --watch db.json```
+
+## Starting the App
+
+Start up another terminal and enter the todo directory by running
  ```cd todo```
 
   
