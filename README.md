@@ -8,8 +8,9 @@ A application which allows the user to request a song to the DJ with a click of 
 
 **Live Demo Site: https://kue.onrender.com/**
 
+## Running the Web Application
 
-## Setting up the Database
+### Setting up the Database
 
 Clone the repository to your local machine using
  ```git clone https://git.fhict.nl/I476238/kue.git```
@@ -26,7 +27,7 @@ Start up a terminal and enter the db directory by running
 Start the database by running 
 ```json-server --watch db.json```
 
-## Starting the App
+### Starting the App
 
 Start up another terminal and enter the todo directory by running
  ```cd todo```
